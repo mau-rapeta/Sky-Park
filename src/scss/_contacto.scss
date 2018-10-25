@@ -1,0 +1,39 @@
+.contacto {
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+
+    &__heading {
+        text-align: center;
+        font-weight: $light;
+        text-transform: uppercase;
+        font-size: $font-bg;
+    }
+
+    &__sub-heading {
+        text-align: center;
+        font-weight: $light;
+    }
+}
+
+.form {
+    width: 60%;
+    margin: 0 auto;
+
+    &__input {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $color-secondary;
+        color: $color-secondary;
+        padding: 5px 0;
+        margin-bottom: 1.5rem;
+
+        &::placeholder {
+            color: $color-secondary;
+        }
+    }
+
+    @media only screen and (max-width: $bp-lg) {
+        width: 80%;
+    }
+}

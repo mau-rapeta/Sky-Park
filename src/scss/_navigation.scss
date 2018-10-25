@@ -1,0 +1,156 @@
+.navigation {
+    width: 100vw;
+    position: fixed;
+    z-index: 200;
+    background-color: $color-white;
+    @media only screen and (max-width: $bp-sm) {
+        padding: 0 2rem;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10rem;
+        margin: 0;
+        @media only screen and (max-width: $bp-lg) {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        &:not(:nth-of-type(10)) {
+            height: 100%;
+        }
+
+        &.logo {
+            align-self: flex-start;
+        }
+
+        &.onlyMobile {
+            height: initial;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-secondary;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: color .2s;
+
+            @media only screen and (max-width: $bp-lg),
+                   only screen and (hover: none) {
+                display: none;
+            }
+        }
+
+        &:hover,
+        &.active {
+            color: $color-primary;
+        }
+
+        &:hover::after,
+        &.active::after {
+            opacity: 1;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 1rem;
+            background-color: $color-primary;
+            position: absolute;
+            transform: translate(-50%, -100%);
+            top: 100%;
+            left: 50%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__logo {
+        width: 14rem;
+        //max-width: 14rem;
+        z-index: 250;
+        @media only screen and (max-width: $bp-lg) {
+            width: 10rem;
+        }
+    }
+
+    &__empty-space {
+        width: 13rem;
+        height: auto;
+        @media only screen and (max-width: $bp-lg),
+               only screen and (hover: none) {
+            display: none;
+        }
+    }
+
+    &__tel {
+        color: $color-primary;
+        font-size: 1.5rem;
+        @media only screen and (max-width: $bp-lg),
+                only screen and (hover: none) {
+            display: none;
+        }
+    }
+
+    &__button {
+        position: relative;
+        cursor: pointer;
+
+        &,
+        &::before,
+        &::after {
+            display: block;
+            width: 4rem;
+            height: 3px;
+            background-color: $color-primary;
+
+            @media only screen and (max-width: $bp-sm) {
+                width: 3rem;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+        
+        &::before {
+            top: -1.5rem;
+
+            @media only screen and (max-width: $bp-sm) {
+               top: -1.2rem;
+            }
+        }
+
+        &::after {
+            bottom: -1.5rem;
+
+            @media only screen and (max-width: $bp-sm) {
+                bottom: -1.2rem;
+             }
+        }
+    }
+
+    &__tel-icon {
+        width: 4rem;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-sm) {
+            width: 3rem;
+        }
+    }
+}

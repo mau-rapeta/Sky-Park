@@ -1,0 +1,59 @@
+.amenidades {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+
+    &__heading {
+        font-size: $font-hg;
+        font-weight: $bold;
+        text-transform: uppercase;
+        text-align: center;
+
+        span {
+            display: block;
+            text-transform: none;
+            font-size: $font-rg;
+            font-weight: $light;
+        }
+
+        &--ext {
+            margin-top: 18rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin-left: 5rem;
+        margin-top: 7rem;
+    }
+
+    &__item {
+        color: $color-secondary;
+        font-weight: $light;
+        margin: 1rem 0;
+        counter-increment: my-counter;
+
+        &::before {
+            content: counter(my-counter);
+            color: currentColor;
+            font-weight: $semi-bold;
+            margin-right: 1.5rem;
+            text-align: right;
+            width: 2rem;
+            display: inline-block;
+        }
+    }
+
+    &__plano {
+        margin: 0 auto;
+        display: block;
+        margin-top: 5rem;
+
+        &--1 {
+            width: 90%;
+        }
+
+        &--2 {
+            width: 70%;
+        }
+    }
+}

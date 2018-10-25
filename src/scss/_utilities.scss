@@ -1,0 +1,234 @@
+.onlyDesktop {
+    display: block;
+}
+
+.onlyMobile {
+    display: none;
+}
+
+@media only screen and (max-width: $bp-lg),
+       only screen and (hover: none) {
+    .onlyDesktop {
+        display: none;
+    }
+    
+    .onlyMobile {
+        display: block;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.jump {
+    display: block;
+}
+
+.medium {
+    font-weight: $medium !important;
+}
+
+.semi-bold {
+    font-weight: $semi-bold !important;
+}
+
+.bold {
+    font-weight: $bold !important;
+}
+
+.btn {
+    font-size: $font-rg;
+    color: $color-white;
+    border: 1px solid transparent;
+    font-weight: $light;
+    text-transform: uppercase;
+    padding: 5px 3rem;
+    display: block;
+    background-color: $color-primary;
+    margin: 0 auto;
+
+    &:hover, 
+    &:active {
+        background-color: $color-white;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+    }
+}
+
+.heading-grey {
+    text-align: center;
+    color: $color-secondary;
+    font-size: $font-md;
+    font-weight: $medium;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 25rem;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: $bp-lg) {
+        margin-bottom: 10rem;
+    }
+    
+
+    &::before, 
+    &::after {
+        content: "";
+        width: 3.5rem;
+        height: 2px;
+        background-color: currentColor;
+        display: block;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    &--deptos {
+        &::before {
+            top: -2.5rem;
+        }
+    
+        &::after {
+            bottom: -3rem;
+    
+            // @media only screen and (max-width: $bp-md) {
+            //     top: 8rem;
+            // }
+        }
+    }
+    
+    &--ameni {
+        &::before {
+            top: -2rem;
+        }
+    
+        &::after {
+            bottom: -2.5rem;
+    
+            // @media only screen and (max-width: $bp-md) {
+            //     top: 8rem;
+            // }
+        }
+    }
+
+    &--toUpper {
+        text-transform: uppercase;
+        font-size: $font-bg;
+    }
+}
+
+///// SLIDER STYLES //////
+.slider {
+
+    &__item {
+        height: 100vh;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+
+        &--1 {
+            background-image: url(../img/home-arquitectura.jpg);
+        }
+
+        &--2 {
+            background-image: url(../img/interiores-01.jpg);
+        }
+
+        &--3 {
+            background-image: url(../img/sports-bar.jpg);
+        }
+
+        &--4 {
+            background-image: url(../img/amenidades-exteriores.jpg)
+        }
+
+        &--5 {
+            background-image: url(../img/amenidades-plaza-comercial.jpg)
+        }
+
+        &--short {
+            height: 60rem;
+        }
+
+    }
+
+    &__block {
+        position: absolute;
+        padding: 6rem 5rem 6rem 2.5rem;
+        top: 12rem;
+        left: 8rem;
+
+        &--grey {
+            background-color: $color-secondary;
+        }
+
+        &--black {
+            background-color: $color-black;
+            top: initial;
+            bottom: 5rem; 
+            left: 10rem;
+            padding: 4rem 2.5rem;
+        }
+
+        &--transparent {
+            background-color: transparent;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: $color-white;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: $light;
+        display: block;
+        position: relative;
+
+        &--lined {
+            &::before,
+            &::after {
+                content: "";
+                width: 2.2rem;
+                height: 1px;
+                display: block;
+                background-color: $color-white;
+            }
+    
+            &::before {
+                margin-bottom: 1rem;
+            }
+    
+            &::after {
+                margin-top: 1rem;
+            }
+        }
+
+        &--crossed {
+            text-align: center;
+
+            // &::before,
+            // &::after {
+            //     content: "";
+            //     width: 20rem;
+            //     height: 2px;
+            //     display: block;
+            //     background-color: $color-white;
+            //     position: absolute;
+            // }
+    
+            // &::before {
+            //     transform: rotate(45deg);
+            //     left: -15%;
+            // }
+    
+            // &::after {
+            //     transform: rotate(135deg);
+            //     left: -15%;
+            // }
+        }
+
+    }
+}

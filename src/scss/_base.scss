@@ -1,0 +1,55 @@
+///////// GENERAL VARIABLES  /////////
+
+// COLORS
+$color-primary: #0A4986;
+$color-secondary: #9C9B9B;
+$color-tertiary: #76B72A;
+$color-quaternary: #8CBCE9;
+$color-black: #000000;
+$color-white: #ffffff;
+
+// FONT FAMILY
+$main-font: 'Raleway', sans-serif;
+
+// FONT SIZES
+$font-rg: 1.8rem;
+$font-md: 2rem;
+$font-bg: 2.2rem;
+$font-hg: 3rem;
+
+// FONT WEIGHTS
+$light: 300;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// BOOTSTRAP BASED BREAKPOINTS 
+$bp-xlg: 75em;      // 1200px
+$bp-lg: 61.9375em;   // 991px
+$bp-md: 47.9375em;   // 767px
+$bp-sm: 35.9375em;   // 575px
+
+////////// BASIC SETUP //////////
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    font-family: $main-font;
+    color: $color-primary;
+    font-size: $font-rg;
+    font-weight: $medium;
+}
+
+a {
+    text-decoration: none !important;
+}
