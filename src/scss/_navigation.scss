@@ -126,6 +126,8 @@
         &::after {
             content: "";
             position: absolute;
+            left: 0;
+            transition: all .2s;
         }
         
         &::before {
@@ -142,6 +144,20 @@
             @media only screen and (max-width: $bp-sm) {
                 bottom: -1.2rem;
              }
+        }
+
+        &.checked {
+            background-color: transparent;
+        }
+
+        &.checked::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &.checked::after {
+            bottom: 0;
+            transform: rotate(-135deg);
         }
     }
 
