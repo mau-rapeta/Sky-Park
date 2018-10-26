@@ -37,4 +37,21 @@ $('.scroll').click(function() {
         $('.navigation__button').removeClass('checked');
         $('.navMobile').css('left', '-100%');
     });
+
+    // Change main slider img & icons on section "nosotros" on screen width
+    
+    if($(window).width() <= 991) {
+        $(".main-slider__img").attr('src', '\img/slide-movil-01.png');
+        $(".nosotros-content__icons").attr('src', '\img/iconos-green-movil.svg');
+    }
+
+    $(window).resize(function() {
+        if($(window).width() <= 991) {
+            $(".main-slider__img").attr('src', '\img/slide-movil-01.png');
+            $(".nosotros-content__icons").attr('src', '\img/iconos-green-movil.svg');
+        } else {
+            $(".main-slider__img").attr('src', '\img/slide-01.png');
+            $(".nosotros-content__icons").attr('src', '\img/iconos-green.svg');
+        }
+    });
 });
