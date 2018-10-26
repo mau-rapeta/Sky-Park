@@ -478,6 +478,11 @@ a {
   width: 60%;
   margin: 0 auto;
   text-align: center; }
+  @media only screen and (max-width: 61.9375em) {
+    .nosotros-content {
+      width: 100%;
+      padding-right: 2rem;
+      padding-left: 2rem; } }
   .nosotros-content__logo {
     width: 25rem;
     margin-bottom: 3rem; }
@@ -513,7 +518,10 @@ a {
 
 .location {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(49rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(49rem, 1fr));
+  background-image: url(../img/textura-gris.jpg);
+  -webkit-background-size: cover;
+  background-size: cover; }
   @media only screen and (max-width: 61.9375em) {
     .location {
       grid-template-columns: 100vw;
@@ -574,9 +582,14 @@ a {
   font-size: 1.3rem;
   color: #9C9B9B;
   text-align: center;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  margin-right: 2rem;
+  margin-left: 2rem; }
 
 .contacto {
+  background-image: url(../img/textura-gris.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
   padding-top: 20rem;
   padding-bottom: 10rem; }
   .contacto__heading {

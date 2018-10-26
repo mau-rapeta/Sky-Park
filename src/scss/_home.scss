@@ -199,6 +199,12 @@
     margin: 0 auto;
     text-align: center;
 
+    @media only screen and (max-width: $bp-lg) {
+        width: 100%;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
     &__logo {
         width: 25rem;
         margin-bottom: 3rem;
@@ -224,57 +230,6 @@
     }   
 }
 
-// ///// ARQUITECTURA SLIDER //////
-// .arquitectura {
-
-//     &__item {
-//         height: 100vh;
-//         position: relative;
-//         background-size: cover;
-//         background-position: center;
-
-//         &--1 {
-//             background-image: url(../img/home-arquitectura.jpg);
-//         }
-
-//     }
-
-//     &__block {
-//         position: absolute;
-//         padding: 5.2rem 2.5rem;
-//         background-color: $color-secondary;
-//         top: 12rem;
-//         left: 8rem;
-//     }
-
-//     &__text {
-//         font-size: 1.6rem;
-//         color: $color-white;
-//         text-transform: uppercase;
-//         line-height: 1.2;
-//         font-weight: $light;
-//         display: block;
-
-//         &::before,
-//         &::after {
-//             content: "";
-//             width: 2.2rem;
-//             height: 1px;
-//             display: block;
-//             background-color: $color-white;
-//         }
-
-//         &::before {
-//             margin-bottom: 1rem;
-//         }
-
-//         &::after {
-//             margin-top: 1rem;
-//         }
-
-//     }
-// }
-
 ////// OASIS SECTION //////
 .oasis {
     height: 100vh;
@@ -298,6 +253,9 @@
 .location {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(49rem, 1fr));
+
+    background-image: url(../img/textura-gris.jpg);
+    background-size: cover;
 
     @media only screen and (max-width: $bp-lg) {
         grid-template-columns: 100vw;
@@ -378,4 +336,6 @@
     color: $color-secondary;
     text-align: center;
     margin-bottom: 5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
