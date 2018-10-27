@@ -129,6 +129,10 @@
         background-size: cover;
         background-position: center;
 
+        @media only screen and (max-width: $bp-lg) {
+            height: 80vw;
+        }
+
         &--1 {
             background-image: url(../img/home-arquitectura.jpg);
         }
@@ -161,6 +165,15 @@
         top: 12rem;
         left: 8rem;
 
+        @media only screen and (max-width: $bp-lg) {
+            top: initial;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
         &--grey {
             background-color: $color-secondary;
         }
@@ -171,10 +184,24 @@
             bottom: 5rem; 
             left: 10rem;
             padding: 4rem 2.5rem;
+
+            @media only screen and (max-width: $bp-lg) {
+                top: initial;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 2rem 0;
+                text-align: center;
+            }
         }
 
         &--transparent {
             background-color: transparent;
+
+            @media only screen and (max-width: $bp-lg) {
+                top: 0;
+                bottom: initial;
+            }
         }
     }
 
@@ -184,8 +211,10 @@
         text-transform: uppercase;
         line-height: 1.2;
         font-weight: $light;
-        display: block;
+        display: inline-block;
         position: relative;
+
+        span { display: block; }
 
         &--lined {
             &::before,
@@ -208,27 +237,32 @@
 
         &--crossed {
             text-align: center;
-
-            // &::before,
-            // &::after {
-            //     content: "";
-            //     width: 20rem;
-            //     height: 2px;
-            //     display: block;
-            //     background-color: $color-white;
-            //     position: absolute;
-            // }
-    
-            // &::before {
-            //     transform: rotate(45deg);
-            //     left: -15%;
-            // }
-    
-            // &::after {
-            //     transform: rotate(135deg);
-            //     left: -15%;
-            // }
         }
 
+        @media only screen and (max-width: $bp-lg) {
+            font-size: $font-bg;
+
+            span { display: inline-block; }
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+            font-size: 1.6rem;
+        }
+
+    }
+
+    @media only screen and (max-width: $bp-lg) {
+        padding: 5rem 4rem;
+
+        .carousel-indicators, 
+        .carousel-control-prev,
+        .carousel-control-next {
+            opacity: 0;
+        }
+
+        &.sport-bar {
+            padding: 0;
+            margin-bottom: 5rem;
+        }
     }
 }

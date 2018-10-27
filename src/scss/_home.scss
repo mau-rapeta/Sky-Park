@@ -41,6 +41,10 @@
             margin: 0;
             max-width: initial;
         }
+        .carousel-control-prev,
+        .carousel-control-next {
+            opacity: 0;
+        }
     }
 
     &__container {
@@ -340,6 +344,7 @@
 ////// OASIS SECTION //////
 .oasis {
     height: 100vh;
+    min-height: 60rem;
     background-image: url(../img/oasis.jpg);
     background-size: cover;
     background-position: center;
@@ -354,6 +359,10 @@
             width: 80%;
             top: 18rem;
         }
+
+        @media only screen and (max-width: $bp-xs) {
+            top: 15rem;
+        }
     }
 
     &__img {
@@ -367,6 +376,11 @@
         font-weight: $light;
         @include absCenter;
         top: 33rem;
+
+        @media only screen and (max-width: $bp-xs) {
+            top: 28rem;
+            font-size: 1.5rem;
+        }
     }
 }
 

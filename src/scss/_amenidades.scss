@@ -17,6 +17,10 @@
 
         &--ext {
             margin-top: 18rem;
+
+            @media only screen and (max-width: $bp-lg) {
+                margin-top: 5rem;
+            }
         }
     }
 
